@@ -21,20 +21,6 @@ def generate_launch_description():
         Node(
             package="motor_controller",
             executable="motor_controller_node",
-            name="motor_controller_n69a7818149a52d7366ae925f",
-            output="screen",
-            additional_env={
-                "POLYFLOW_NODE_ID": "69a7818149a52d7366ae925f",
-                "POLYFLOW_PARAMETERS": json.dumps(json.loads('{"motor_id":"motor_0","control_mode":"velocity","max_speed":1}')),
-                "POLYFLOW_CONFIGURATION": json.dumps(json.loads('{"namespace":null,"rate_hz":50,"lifecycle":null}')),
-                "POLYFLOW_PINS": json.dumps(json.loads('[{"pin_id":"69a3e541cd15153dec61d7af:command","name":"command","direction":"input","msg_type":"std_msgs/Float64"},{"pin_id":"69a3e541cd15153dec61d7af:state","name":"state","direction":"output","msg_type":"polyflow_msgs/MotorState"}]')),
-                "POLYFLOW_INBOUND_CONNECTIONS": json.dumps(json.loads('[{"connection_id":"69a781b049a52d7366ae92a5","source_node_id":"69a7818b49a52d7366ae926f","source_pin_id":"front_left_motor","target_pin_id":"command"}]')),
-                "POLYFLOW_OUTBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
-            }
-        ),
-        Node(
-            package="motor_controller",
-            executable="motor_controller_node",
             name="motor_controller_n69a7818749a52d7366ae9265",
             output="screen",
             additional_env={
@@ -57,6 +43,20 @@ def generate_launch_description():
                 "POLYFLOW_CONFIGURATION": json.dumps(json.loads('{"namespace":null,"rate_hz":50,"lifecycle":null}')),
                 "POLYFLOW_PINS": json.dumps(json.loads('[{"pin_id":"69a3e541cd15153dec61d7af:command","name":"command","direction":"input","msg_type":"std_msgs/Float64"},{"pin_id":"69a3e541cd15153dec61d7af:state","name":"state","direction":"output","msg_type":"polyflow_msgs/MotorState"}]')),
                 "POLYFLOW_INBOUND_CONNECTIONS": json.dumps(json.loads('[{"connection_id":"69a781b549a52d7366ae92ae","source_node_id":"69a7818b49a52d7366ae926f","source_pin_id":"rear_right_motor","target_pin_id":"command"}]')),
+                "POLYFLOW_OUTBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
+            }
+        ),
+        Node(
+            package="motor_controller",
+            executable="motor_controller_node",
+            name="motor_controller_n69a7818149a52d7366ae925f",
+            output="screen",
+            additional_env={
+                "POLYFLOW_NODE_ID": "69a7818149a52d7366ae925f",
+                "POLYFLOW_PARAMETERS": json.dumps(json.loads('{"motor_id":"motor_0","control_mode":"velocity","max_speed":1}')),
+                "POLYFLOW_CONFIGURATION": json.dumps(json.loads('{"namespace":null,"rate_hz":50,"lifecycle":null}')),
+                "POLYFLOW_PINS": json.dumps(json.loads('[{"pin_id":"69a3e541cd15153dec61d7af:command","name":"command","direction":"input","msg_type":"std_msgs/Float64"},{"pin_id":"69a3e541cd15153dec61d7af:state","name":"state","direction":"output","msg_type":"polyflow_msgs/MotorState"}]')),
+                "POLYFLOW_INBOUND_CONNECTIONS": json.dumps(json.loads('[{"connection_id":"69a781b049a52d7366ae92a5","source_node_id":"69a7818b49a52d7366ae926f","source_pin_id":"front_left_motor","target_pin_id":"command"}]')),
                 "POLYFLOW_OUTBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
             }
         ),
