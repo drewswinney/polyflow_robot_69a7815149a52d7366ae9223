@@ -158,4 +158,32 @@ def generate_launch_description():
                 "POLYFLOW_OUTBOUND_CONNECTIONS": json.dumps(json.loads('[{"connection_id":"69a781a649a52d7366ae9296","target_node_id":"69a7818b49a52d7366ae926f","source_pin_id":"encoder_state","target_pin_id":"encoder_right"}]')),
             }
         ),
+        Node(
+            package="camera",
+            executable="camera_node",
+            name="camera_n69a79a0549a52d7366ae94ab",
+            output="screen",
+            additional_env={
+                "POLYFLOW_NODE_ID": "69a79a0549a52d7366ae94ab",
+                "POLYFLOW_PARAMETERS": json.dumps(json.loads('{"camera_id":"camera_0","device_index":0,"width":640,"height":480,"fps":30}')),
+                "POLYFLOW_CONFIGURATION": json.dumps(json.loads('{"namespace":null,"rate_hz":30,"lifecycle":null}')),
+                "POLYFLOW_PINS": json.dumps(json.loads('[{"pin_id":"69a3e728cd15153dec61d816:capture","name":"capture","direction":"input","msg_type":"std_msgs/Empty"},{"pin_id":"69a3e728cd15153dec61d816:frame","name":"frame","direction":"output","msg_type":"polyflow_msgs/CameraFrame"}]')),
+                "POLYFLOW_INBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
+                "POLYFLOW_OUTBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
+            }
+        ),
+        Node(
+            package="odrive_s1",
+            executable="odrive_s1_node",
+            name="odrive_s1_n69a79a0c49a52d7366ae94b1",
+            output="screen",
+            additional_env={
+                "POLYFLOW_NODE_ID": "69a79a0c49a52d7366ae94b1",
+                "POLYFLOW_PARAMETERS": json.dumps(json.loads('{"joint":"69a7817249a52d7366ae9245","control_mode":"position","transport":"can","units":"radians","gear_ratio":1,"smoothing_alpha":0,"can.node_id":0,"can.interface":"socketcan","can.channel":"can0","can.bitrate":1000000,"can.poll_hz":50,"can.request_iq":false,"can.heartbeat_timeout_s":2,"can.enable_closed_loop_on_start":true,"can.torque_constant":0,"limit.lower_position":0,"limit.upper_position":360,"limit.position_step":null,"limit.max_effort":0,"limit.effort_step":0.1,"limit.max_velocity":0,"limit.velocity_step":0.1}')),
+                "POLYFLOW_CONFIGURATION": json.dumps(json.loads('{"namespace":"/robot/base","rate_hz":150,"lifecycle":true}')),
+                "POLYFLOW_PINS": json.dumps(json.loads('[{"pin_id":"6976bda65eb68f72bfec9b31:/joint/state","name":"/joint/state","direction":"output","msg_type":"sensor_msgs/JointState"},{"pin_id":"6976bda65eb68f72bfec9b31:/joint_controller/command","name":"/joint_controller/command","direction":"input","msg_type":"trajectory_msgs/JointTrajectory"}]')),
+                "POLYFLOW_INBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
+                "POLYFLOW_OUTBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
+            }
+        ),
     ])
