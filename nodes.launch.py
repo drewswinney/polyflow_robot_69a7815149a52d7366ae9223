@@ -75,20 +75,6 @@ def generate_launch_description():
             }
         ),
         Node(
-            package="logger",
-            executable="logger_node",
-            name="logger_n69a7818f49a52d7366ae9275",
-            output="screen",
-            additional_env={
-                "POLYFLOW_NODE_ID": "69a7818f49a52d7366ae9275",
-                "POLYFLOW_PARAMETERS": json.dumps(json.loads('{"log_file":"","log_to_stdout":true}')),
-                "POLYFLOW_CONFIGURATION": json.dumps(json.loads('{}')),
-                "POLYFLOW_PINS": json.dumps(json.loads('[]')),
-                "POLYFLOW_INBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
-                "POLYFLOW_OUTBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
-            }
-        ),
-        Node(
             package="gamepad",
             executable="gamepad_node",
             name="gamepad_n69a7819549a52d7366ae9284",
@@ -168,6 +154,20 @@ def generate_launch_description():
                 "POLYFLOW_PARAMETERS": json.dumps(json.loads('{"camera_id":"camera_0","device_index":0,"width":640,"height":480,"fps":30}')),
                 "POLYFLOW_CONFIGURATION": json.dumps(json.loads('{"namespace":null,"rate_hz":30,"lifecycle":null}')),
                 "POLYFLOW_PINS": json.dumps(json.loads('[{"pin_id":"69a3e728cd15153dec61d816:capture","name":"capture","direction":"input","msg_type":"std_msgs/Empty"},{"pin_id":"69a3e728cd15153dec61d816:frame","name":"frame","direction":"output","msg_type":"polyflow_msgs/CameraFrame"}]')),
+                "POLYFLOW_INBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
+                "POLYFLOW_OUTBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
+            }
+        ),
+        Node(
+            package="logger",
+            executable="logger_node",
+            name="logger_n69a7818f49a52d7366ae9275",
+            output="screen",
+            additional_env={
+                "POLYFLOW_NODE_ID": "69a7818f49a52d7366ae9275",
+                "POLYFLOW_PARAMETERS": json.dumps(json.loads('{"log_file":"","log_to_stdout":true}')),
+                "POLYFLOW_CONFIGURATION": json.dumps(json.loads('{}')),
+                "POLYFLOW_PINS": json.dumps(json.loads('[]')),
                 "POLYFLOW_INBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
                 "POLYFLOW_OUTBOUND_CONNECTIONS": json.dumps(json.loads('[]')),
             }
